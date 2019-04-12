@@ -1,0 +1,27 @@
+﻿@using E_ticaret.Models;
+@{
+    ViewBag.Title ="Kategori";
+    Kategori kisim = ViewBag.kategori as Kategori;
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <h4>Kategoriler</h4>
+        <ul>
+            @foreach (var item in (List<Kategori>)ViewBag.KategoriListesi)
+            {
+                <li>@Html.ActionLink(item.Kategoriadi, "Kategori", new { id = item.KategoriID })</li>
+            }
+        </ul>
+    </div>
+    <div class="col-md-9">
+        @foreach (var item in ViewData.Model)
+        {
+            <div class="col-md-4" style="border:1px solid #808080; background-color:#cbd5b6">
+                <h5>@item.UrunAdi</h5>
+                <img src="~/IMG/@(item.UrunID).jpg" style="width:100px; height:100px; background-size:cover" />
+                <p><a class="btn btn-default" href="@Url.Action("UrunDetay","Home",new { id = item.UrunID})">Ürün Detay &raquo;</a><span style="color:red; float:right; font-weight:bold;font-size:16px;">@item.UrunFiyati TL</span></p>
+            </div>
+        }
+    </div>
+</div>

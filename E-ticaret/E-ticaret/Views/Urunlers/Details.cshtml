@@ -1,0 +1,54 @@
+﻿@model E_ticaret.Models.Urunler
+
+@{
+    ViewBag.Title = "Ürün Detayları";
+}
+
+<h2>Detaylar</h2>
+
+<div>
+    @*<h4>Ürünler</h4>*@
+    <hr />
+    <dl class="dl-horizontal">
+        <h4>Ürünler</h4>
+        <dt>
+            Ürün Adı
+            @*@Html.DisplayNameFor(model => model.UrunAdi)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrunAdi)
+        </dd>
+
+        <dt>
+            Ürün Açıklaması
+            @*@Html.DisplayNameFor(model => model.UrunAciklamasi)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrunAciklamasi)
+        </dd>
+
+        <dt>
+            Ürün Fiyatı
+            @*@Html.DisplayNameFor(model => model.UrunFiyati)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrunFiyati)
+        </dd>
+
+        <dt>
+            Kategori
+            @*@Html.DisplayNameFor(model => model.Kategori.Kategoriadi)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kategori.Kategoriadi)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.UrunID }) |
+    @Html.ActionLink("Ürünlere geri dön", "Index")
+</p>

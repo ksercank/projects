@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3548dc335926433781d0dab0a601a217" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="ETICARETModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ETICARETModel.AspNetRole" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ETICARETModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ETICARETModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ETICARETModel.AspNetUser" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ETICARETModel.Kategori" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ETICARETModel.Sepet" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ETICARETModel.SiparisDetay" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ETICARETModel.Urunler" Width="1.5" PointX="7.75" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="ETICARETModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="ETICARETModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="ETICARETModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ETICARETModel.sysdiagram" Width="1.5" PointX="0.75" PointY="9.75" />
+        <AssociationConnector Association="ETICARETModel.FK_Sepet_AspNetUsers" />
+        <AssociationConnector Association="ETICARETModel.FK_Urunler_Kategori" />
+        <AssociationConnector Association="ETICARETModel.FK_Sepet_Urunler" />
+        <AssociationConnector Association="ETICARETModel.FK_SiparisDetay_Sepet" />
+        <AssociationConnector Association="ETICARETModel.FK_SiparisDetay_Urunler" />
+        <EntityTypeShape EntityType="ETICARETModel.Siparis" Width="1.5" PointX="6.875" PointY="7.375" />
+        <AssociationConnector Association="ETICARETModel.FK_Siparis_AspNetUsers" />
+        <AssociationConnector Association="ETICARETModel.FK_SiparisDetay_Siparis" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

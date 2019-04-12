@@ -1,0 +1,25 @@
+﻿body {
+}
+
+.myclass {
+    color: black;
+}
+
+    .myclass:active {
+        color: #000000;
+    }
+
+    .myclass:link {
+        color: #000000;
+    }
+
+    .myclass:visited {
+        color: #000000;
+    }
+
+    .dicon {            
+    icon:url('../ICON/iconfinder_icon-136-document-edit_314834.png');
+    background-image: url('../ICON/iconfinder_icon-136-document-edit_314834.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+    }

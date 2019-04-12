@@ -1,0 +1,50 @@
+﻿@model E_ticaret.Models.Sepet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sepet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Adet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Toplam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Toplam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Urunler.UrunAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Urunler.UrunAdi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.SepetID }) |
+    @Html.ActionLink("Listeye geri dön", "Index")
+</p>

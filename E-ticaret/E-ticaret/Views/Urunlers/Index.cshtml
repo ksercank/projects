@@ -1,0 +1,59 @@
+﻿@model IEnumerable<E_ticaret.Models.Urunler>
+
+@{
+    ViewBag.Title = "Ürünler";
+}
+
+<h2>Ürünler</h2>
+
+<p>
+    @Html.ActionLink("Yeni Ürün", "Create", new { @class = "myclass" })
+</p>
+<table class="table">
+    <tr>
+        <th>Resim</th>
+        <th>
+            Ürün Adı
+            @*@Html.DisplayNameFor(model => model.UrunAdi)*@
+        </th>
+        <th>
+            Ürün Açıklaması
+            @*@Html.DisplayNameFor(model => model.UrunAciklamasi)*@
+        </th>
+        <th>
+            Ürün Fiyatı
+            @*@Html.DisplayNameFor(model => model.UrunFiyati)*@
+        </th>
+        <th>
+            Kategori
+            @*@Html.DisplayNameFor(model => model.Kategori.Kategoriadi)*@
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img style="width:100px; height:100px;" src="/IMG/@(item.UrunID).jpg" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrunAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrunAciklamasi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrunFiyati)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kategori.Kategoriadi)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.UrunID }, new { @class= "myclass" }) |            
+            @Html.ActionLink("Detaylar", "Details", new { id=item.UrunID }, new { @class = "myclass" }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.UrunID }, new { @class = "myclass" })
+        </td>
+    </tr>
+}
+
+</table>

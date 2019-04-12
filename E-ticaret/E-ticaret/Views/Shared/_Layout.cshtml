@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Style/StyleSheet1.css" rel="stylesheet" />
+</head>
+<body style="background-color:lightgrey">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" style="margin:0%; height:45px">
+        @Html.ActionLink("E-Ticaret", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        <div class="container">
+            <ul class="navbar-nav">
+                <li class="navbar"><a class="navbar-text" href="../../Home/Index">Anasayfa</a></li>
+                <li class="navbar"><a style="display: @ViewBag.display" class="navbar-text" href="../../Urunlers/Index">Ürünler</a></li>
+                <li class="navbar"><a style="display: @ViewBag.display" class="navbar-text" href="../../Kategoris/Index">Kategori</a></li>
+                <li class="navbar"><a class="navbar-text" href="../../Home/About">Hakkında</a></li>
+                <li class="navbar"><a class="navbar-text" href="../../Home/Contact">İletişim</a></li>
+
+                @*<li class="nav-item">@Html.ActionLink("Anasayfa", "Index", "Home", new { @class = "navbar-text" })</li>
+                <li class="nav-item">@Html.ActionLink("Hakkında", "About", "Home", new { @class = "navbar-text" })</li>
+                <li class="nav-item">@Html.ActionLink("İletişim", "Contact", "Home", new { @class = "navbar-text" })</li>*@
+
+            </ul>
+        </div>
+        <div class="container"></div>
+        <div class="container"  style="float:right">
+            <ul class="navbar-nav">
+                <li>
+                    @Html.Partial("_LoginPartial")
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

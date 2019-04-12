@@ -1,0 +1,76 @@
+﻿@model IEnumerable<E_ticaret.Models.Siparis>
+
+@{
+    ViewBag.Title = "Sipariş Sayfası";
+}
+
+<h2>Siparişler</h2>
+
+<p>
+    @Html.ActionLink("Yeni oluştur", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Ad
+            @*@Html.DisplayNameFor(model => model.Ad)*@
+        </th>
+        <th>
+            Soyad
+            @*@Html.DisplayNameFor(model => model.Soyad)*@
+        </th>
+        <th>
+            Adres
+            @*@Html.DisplayNameFor(model => model.Adres)*@
+        </th>
+        <th>
+            Telefon
+            @*@Html.DisplayNameFor(model => model.Telefon)*@
+        </th>
+        <th>
+            T.C. Kimlik Numarası
+            @*@Html.DisplayNameFor(model => model.TC_Kimlik)*@
+        </th>
+        <th>
+            Tarih
+            @*@Html.DisplayNameFor(model => model.Tarih)*@
+        </th>
+        <th>
+            E-Mail
+            @*@Html.DisplayNameFor(model => model.AspNetUser.Email)*@
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Soyad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TC_Kimlik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tarih)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AspNetUser.Email)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.SiparisID }) |
+            @Html.ActionLink("Detaylar", "Details", new { id=item.SiparisID }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.SiparisID })
+        </td>
+    </tr>
+}
+
+</table>
